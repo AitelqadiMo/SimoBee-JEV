@@ -87,7 +87,7 @@ export function Header({ snap, connected, stalled, soundOn, onSound }: { snap: S
         <Counter
           label="Jev spend"
           value={t ? money(t.jevUsd, 4) : "–"}
-          sub={jev ? `today ${money(jev.spentTodayUsd, 3)} of ${money(jev.dailyCapUsd, 0)} cap` : undefined}
+          sub={jev ? `today ${money(jev.spentTodayUsd, 3)} of ${money(jev.dailyCapUsd, 2)} cap` : undefined}
         />
         <Counter label="Decisions" value={decisions.toLocaleString()} sub={jev?.down ? "Jev unreachable: holding" : jev?.capTripped ? "Jev cap hit: holding" : "every one recorded"} tone={jev?.down || jev?.capTripped ? "bad" : undefined} />
         <Counter label="Visitors" value={snap?.visitors ? snap.visitors.total.toLocaleString() : "–"} sub={snap?.visitors ? `${snap.visitors.watching} watching now` : undefined} />
